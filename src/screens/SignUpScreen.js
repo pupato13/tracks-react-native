@@ -1,10 +1,16 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-const SignUpScreen = () => {
+const SignUpScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Sign Up Screen</Text>
+            <TouchableOpacity onPress={() => navigation.navigate("SignIn")}>
+                <Text>go to Sign In</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("mainFlow")}>
+                <Text>go to Main Flow</Text>
+            </TouchableOpacity>
         </View>
     );
 };

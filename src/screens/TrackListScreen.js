@@ -1,10 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-const TrackListScreen = () => {
+const TrackListScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Track List Screen</Text>
+            <TouchableOpacity
+                onPress={() => navigation.navigate("TrackDetail")}
+            >
+                <Text>go to Track Detail</Text>
+            </TouchableOpacity>
         </View>
     );
 };
