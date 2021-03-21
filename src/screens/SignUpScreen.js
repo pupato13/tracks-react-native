@@ -11,6 +11,8 @@ const SignUpScreen = ({ navigation }) => {
     const { state, signUp } = useContext(AuthContext);
 
     const handleSignUp = async () => {
+        console.log(email);
+        console.log(password);
         await signUp({ email, password });
     };
 
